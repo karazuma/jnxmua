@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;700&family=Nunito+Sans:wght@200&display=swap");
+
+body {
+  font-family: "Bodoni Moda", sans-serif;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* justify-content: center; */
+  /* width: 80%; */
+  /* overflow: hidden; */
+  /* margin: 0; */
+}
+
+.box-panel {
+  /* background-color: rgb(80, 78, 78); */
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding-bottom: 1em;
+}
+
+#logo {
+  font-size: 31px;
+  font-weight: 700;
+  margin-top: 1em;
+  margin-left: 1em;
+  letter-spacing: 5px;
+  /* background-color: #0bca2b; */
+}
+
+.nav {
+  font-size: 16px;
+  font-weight: 500;
+  /* background-color: red; */
+  margin-right: 1em;
+  padding: 1px;
+  text-align: right;
+  margin-top: 2em;
+}
+
+ul li {
+  display: inline;
+  padding-left: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+ul li:hover {
+  color: rgb(122, 38, 38);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.gallery {
+  width: 100%;
+  text-align: center;
+}
+
+.photo {
+  position: relative;
+  width: 295;
+  height: 365;
+  margin: 10px;
+  background-color: blue;
+  display: -webkit-inline-flex;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.photo img {
+  width: 100%;
+  object-fit: cover;
+  background-color: red;
+}
+
+.img-overlay {
+  font-family: "Nunito Sans", sans-serif;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  background: rgba(122, 38, 38, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s, visibility 0.1s;
+}
+
+.photo:hover .img-overlay {
+  visibility: visible;
+  opacity: 1;
+}
