@@ -59,6 +59,14 @@ ul li:hover {
   text-align: center;
 }
 
+a {
+  position: relative;
+  width: 295;
+  height: 365;
+  margin: 0px;
+  display: -webkit-inline-flex;
+}
+
 .photo {
   position: relative;
   width: 295;
