@@ -11,31 +11,42 @@ body {
   /* margin: 0; */
 }
 
+.container {
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* background-color: lightcoral; */
+}
+
 .box-panel {
   /* background-color: rgb(80, 78, 78); */
-  width: 100%;
+  /* width: 100%; */
   display: grid;
   grid-template-columns: 30% 70%;
   padding-bottom: 1em;
 }
 
 #logo {
+  /* background-color: #0bca2b; */
   font-size: 31px;
   font-weight: 700;
   margin-top: 1em;
   margin-left: 2em;
   letter-spacing: 5px;
-  /* background-color: #0bca2b; */
 }
 
 .nav {
+  /* background-color: red; */
   font-size: 16px;
   font-weight: 500;
-  /* background-color: red; */
   margin-right: 2em;
   padding-right: 2em;
   text-align: right;
   margin-top: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 ul li {
@@ -45,13 +56,12 @@ ul li {
   cursor: pointer;
 }
 
-ul li:hover {
-  color: rgb(122, 38, 38);
+ul li:active {
+  color: aqua;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
+ul li:hover {
+  color: rgb(122, 38, 38);
 }
 
 .gallery {
@@ -59,7 +69,7 @@ ul li:hover {
   text-align: center;
 }
 
-a {
+.photo .photo-lightbox {
   position: relative;
   width: 295;
   height: 365;
@@ -81,7 +91,7 @@ a {
 .photo img {
   width: 100%;
   object-fit: cover;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .img-overlay {
@@ -103,4 +113,34 @@ a {
 .photo:hover .img-overlay {
   visibility: visible;
   opacity: 1;
+}
+
+/* Transition animation between pages. */
+.animate-in {
+  -webkit-animation: fadeIn 0.5s ease-in;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.animate-out {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
