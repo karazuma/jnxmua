@@ -129,7 +129,6 @@ ul li:hover {
 
 .about-container {
   display: flex;
-  align-items: center;
   margin-top: 1em;
 }
 
@@ -153,6 +152,7 @@ ul li:hover {
   padding-left: 50px;
   font-family: "Nunito Sans", sans-serif;
   text-transform: uppercase;
+  flex-direction: column;
 }
 
 .about-form h1 {
@@ -194,6 +194,7 @@ input:focus {
 
 .form-container input[type="text"],
 .form-container textarea {
+  font-family: "Nunito Sans", sans-serif;
   padding: 8px;
   /* background-color: magenta; */
   width: 100%;
@@ -208,6 +209,34 @@ input:focus {
   padding: 10px 40px;
   border: 1px solid rgb(141, 141, 141);
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container .button:hover {
+  color: black;
+}
+
+#status {
+  margin-top: 1em;
+}
+
+#status.success {
+  color: rgb(16, 173, 56);
+  animation: status 7s ease forwards;
+}
+
+#status.error {
+  color: rgb(173, 16, 16);
+  animation: status 7s ease forwards;
+}
+
+@keyframes status {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes fadeIn {
