@@ -127,6 +127,82 @@ ul li:hover {
   opacity: 0;
 }
 
+.about-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.about-photo {
+  flex: 1;
+  background-color: lightcoral;
+  max-width: 420px;
+  height: auto;
+  margin-left: 6em;
+  margin-top: 30px;
+}
+
+.about-photo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-form {
+  flex: 1;
+  /* background-color: lightseagreen; */
+  padding-left: 50px;
+  font-family: "Nunito Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.about-form h1 {
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.about-form h2 {
+  font-size: 18px;
+  color: rgb(102, 102, 102);
+  letter-spacing: 2px;
+}
+
+.about-form h3 {
+  font-size: 16px;
+}
+
+.about-form #instagram {
+  font-size: 16px;
+  color: rgb(122, 38, 38);
+}
+
+.form-container {
+  text-transform: uppercase;
+  /* background-color: lime; */
+  max-width: 400px;
+}
+
+.form-container .form-group {
+  padding-bottom: 20px;
+  color: rgb(129, 129, 129);
+  /* background-color: lightskyblue; */
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+  padding: 8px;
+  /* background-color: magenta; */
+  width: 100%;
+  color: rgb(129, 129, 129);
+}
+
+.form-container .button[type="submit"] {
+  background-color: rgb(255, 255, 255);
+  color: rgb(114, 114, 114);
+  padding: 10px 40px;
+  border-radius: 4px;
+}
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
