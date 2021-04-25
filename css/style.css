@@ -135,7 +135,7 @@ ul li:hover {
 
 .about-photo {
   flex: 1;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   max-width: 420px;
   height: auto;
   margin-left: 6em;
@@ -188,18 +188,25 @@ ul li:hover {
   /* background-color: lightskyblue; */
 }
 
+input:focus {
+  outline: none;
+}
+
 .form-container input[type="text"],
 .form-container textarea {
   padding: 8px;
   /* background-color: magenta; */
   width: 100%;
-  color: rgb(129, 129, 129);
+  color: rgb(141, 141, 141);
+  border: none;
+  border-bottom: 1px solid rgb(141, 141, 141);
 }
 
 .form-container .button[type="submit"] {
   background-color: rgb(255, 255, 255);
   color: rgb(114, 114, 114);
   padding: 10px 40px;
+  border: 1px solid rgb(141, 141, 141);
   border-radius: 4px;
 }
 
