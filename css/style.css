@@ -82,7 +82,6 @@ ul li:hover {
   width: 295;
   height: 365;
   margin: 10px;
-  background-color: blue;
   display: -webkit-inline-flex;
   opacity: 1;
   cursor: pointer;
@@ -91,7 +90,6 @@ ul li:hover {
 .photo img {
   width: 100%;
   object-fit: cover;
-  /* background-color: red; */
 }
 
 .img-overlay {
