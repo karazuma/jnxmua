@@ -24,7 +24,7 @@ function createPhotoElement(url) {
   return photoElement;
 }
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 8; i++) {
   let url = "";
   if (i < 10) {
     url = `images/beauty/b00${i}.jpg`;
