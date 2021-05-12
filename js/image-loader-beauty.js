@@ -1,4 +1,4 @@
-function createPhotoElement(url) {
+function createPhotoElement(url, desc) {
   const photoElement = document.createElement("div");
   photoElement.className = "photo";
 
@@ -11,9 +11,7 @@ function createPhotoElement(url) {
   imageElement.src = url;
 
   const paragraphElement = document.createElement("p");
-  const paragraphText = document.createTextNode(
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et risus purus. Ut sed sem leo. Maecenas molestie condimentum lectus, vel tempus tellus dapibus at. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed lacinia ipsum at nulla luctus, nec ultrices elit convallis. Nulla ut arcu consequat odio consectetur gravida eget ut diam. Maecenas elementum mauris non ullamcorper pulvinar. Nunc nec enim ultrices, fringilla tortor a, dictum lectus."
-  );
+  const paragraphText = document.createTextNode(desc);
   paragraphElement.appendChild(paragraphText);
   paragraphElement.className = "img-overlay";
 
@@ -24,14 +22,32 @@ function createPhotoElement(url) {
   return photoElement;
 }
 
-for (let i = 1; i <= 8; i++) {
-  let url = "";
-  if (i < 10) {
-    url = `images/beauty/b00${i}.jpg`;
-  } else {
-    url = `images/beauty/b0${i}.jpg`;
-  }
+fetch("descriptions-beauty.json")
+  .then((response) => response.json())
+  .catch((_) => console.log("Something went wrong with json file"))
+  .then((data) => {
+    data.forEach((p) => {
+      let url = p.photo;
+      let desc = p.description;
+      const photoElement = createPhotoElement(url, desc);
 
-  const photoElement = createPhotoElement(url);
-  document.body.querySelector(".gallery").appendChild(photoElement);
-}
+      document.body.querySelector(".gallery").appendChild(photoElement);
+    });
+  })
+  .catch((_) =>
+    console.log("Something went wrong with images or json's content")
+  );
+
+
+
+  // for (let i = 1; i <= 8; i++) {
+//   let url = "";
+//   if (i < 10) {
+//     url = `images/beauty/b00${i}.jpg`;
+//   } else {
+//     url = `images/beauty/b0${i}.jpg`;
+//   }
+
+//   const photoElement = createPhotoElement(url);
+//   document.body.querySelector(".gallery").appendChild(photoElement);
+// }
